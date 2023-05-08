@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="folding-area">
+            <h1>Control your working time</h1>
+            <h3>This application can help you to control how much you work and remind you to relax</h3>
+            <div class="input-field">
+                <label class="text">Please, enter your working time in minutes</label>
+                <input type="text" id="working-time" placeholder="Enter minutes">
+            </div>
+            <div class="input-field">
+                <label class="text">Please, enter your relaxing time in minutes</label>
+                <input type="text" id="relaxing-time" placeholder="Enter minutes">
+            </div>
+            <p id="timeTo"></p>
+            <div class="sounds-container">
+                <h3>You can choose a video to help you relax</h3>
+                <div class="soundButtons">
+                    <button id="ocean" class="sounds">ocean</button>
+                    <button id="forest" class="sounds">forest</button>
+                    <button id="rain" class="sounds">rain</button>
+                </div>
+                <audio id="oceanSound">
+                    <source src="ocean.mp3" loop="loop" type="audio/mp3">
+                </audio>
+                <audio id="forestSound">
+                    <source src="forest.mp3" loop="loop" type="audio/mp3">
+                </audio>
+                <audio id="rainSound">
+                    <source src="rain.mp3" loop="loop" type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+       <div class="timer-container">
+            <div class="timer">
+                <p id="minutes" class="time">0</p>
+                <p class="colon">:</p>
+                <p id="seconds" class="time">00</p>
+            </div>
+            <button id="startTimer">START TIMER</button>
+            <button id="showTimer">SHOW TIMER</button>
+        </div>
+        
+        <audio id="timeOver">
+            <source src="theend.mp3" loop="loop" type="audio/mp3">
+        </audio>
+    </div>
+    <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline id="forestVideo">
+        <source src="forest.mp4" type="video/mp4">
+    </video>
+    <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline id="oceanVideo">
+        <source src="ocean.mp4" type="video/mp4">
+    </video>
+    <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline id="rainVideo">
+        <source src="rain.mp4" type="video/mp4">
+    </video>
+    <script src="script.js"></script>
+</body>
+</html>
